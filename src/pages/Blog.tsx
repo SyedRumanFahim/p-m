@@ -13,79 +13,97 @@ export default function Blog() {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Sample blog posts for fallback
-  const sampleBlogPosts = [
+  // Sample blog posts for fallback - Updated to match BlogPost interface
+  const sampleBlogPosts: BlogPost[] = [
     {
-      id: 1,
+      _id: '1',
       title: 'Essential API Testing Strategies for Modern Applications',
       excerpt: 'Learn comprehensive approaches to API testing including validation techniques, security testing, and performance optimization for robust backend services.',
       content: 'API testing is crucial for ensuring the reliability and security of modern applications...',
       author: 'Mahmuda Ferdus',
-      date: '2024-08-15',
-      readTime: '8 min read',
+      createdAt: new Date('2024-08-15'),
+      updatedAt: new Date('2024-08-15'),
       category: 'API Testing',
       tags: ['API', 'Testing', 'Automation', 'Best Practices'],
-      image: '/api/placeholder/400/200'
+      featuredImage: '/api/placeholder/400/200',
+      status: 'published',
+      views: 0,
+      slug: 'essential-api-testing-strategies'
     },
     {
-      id: 2,
+      _id: '2',
       title: 'Mastering Selenium WebDriver: Advanced Techniques',
       excerpt: 'Deep dive into advanced Selenium WebDriver techniques including page object model, data-driven testing, and cross-browser automation.',
       content: 'Selenium WebDriver is a powerful tool for web automation...',
       author: 'Mahmuda Ferdus',
-      date: '2024-08-10',
-      readTime: '12 min read',
+      createdAt: new Date('2024-08-10'),
+      updatedAt: new Date('2024-08-10'),
       category: 'Automation',
       tags: ['Selenium', 'WebDriver', 'Automation', 'Java'],
-      image: '/api/placeholder/400/200'
+      featuredImage: '/api/placeholder/400/200',
+      status: 'published',
+      views: 0,
+      slug: 'mastering-selenium-webdriver'
     },
     {
-      id: 3,
+      _id: '3',
       title: 'Performance Testing with JMeter: A Complete Guide',
       excerpt: 'Comprehensive guide to performance testing using Apache JMeter, covering load testing, stress testing, and result analysis.',
       content: 'Performance testing is essential for ensuring applications can handle expected load...',
       author: 'Mahmuda Ferdus',
-      date: '2024-08-05',
-      readTime: '15 min read',
+      createdAt: new Date('2024-08-05'),
+      updatedAt: new Date('2024-08-05'),
       category: 'Performance Testing',
       tags: ['JMeter', 'Performance', 'Load Testing', 'Optimization'],
-      image: '/api/placeholder/400/200'
+      featuredImage: '/api/placeholder/400/200',
+      status: 'published',
+      views: 0,
+      slug: 'performance-testing-jmeter'
     },
     {
-      id: 4,
+      _id: '4',
       title: 'Agile Testing: Best Practices for QA in Scrum Teams',
       excerpt: 'How to effectively integrate quality assurance practices in Agile development environments while maintaining speed and quality.',
       content: 'Agile methodology has transformed how we approach software development...',
       author: 'Mahmuda Ferdus',
-      date: '2024-07-30',
-      readTime: '10 min read',
+      createdAt: new Date('2024-07-30'),
+      updatedAt: new Date('2024-07-30'),
       category: 'Agile Testing',
       tags: ['Agile', 'Scrum', 'QA Process', 'Team Collaboration'],
-      image: '/api/placeholder/400/200'
+      featuredImage: '/api/placeholder/400/200',
+      status: 'published',
+      views: 0,
+      slug: 'agile-testing-best-practices'
     },
     {
-      id: 5,
+      _id: '5',
       title: 'Building Effective Test Documentation',
       excerpt: 'Learn how to create comprehensive test documentation that improves team collaboration and ensures consistent testing practices.',
       content: 'Good test documentation is the foundation of successful QA processes...',
       author: 'Mahmuda Ferdus',
-      date: '2024-07-25',
-      readTime: '6 min read',
+      createdAt: new Date('2024-07-25'),
+      updatedAt: new Date('2024-07-25'),
       category: 'Test Management',
       tags: ['Documentation', 'Test Cases', 'Process', 'Standards'],
-      image: '/api/placeholder/400/200'
+      featuredImage: '/api/placeholder/400/200',
+      status: 'published',
+      views: 0,
+      slug: 'building-effective-test-documentation'
     },
     {
-      id: 6,
+      _id: '6',
       title: 'Mobile App Testing: iOS and Android Best Practices',
       excerpt: 'Comprehensive approach to mobile application testing covering device compatibility, performance, and user experience validation.',
       content: 'Mobile app testing presents unique challenges and opportunities...',
       author: 'Mahmuda Ferdus',
-      date: '2024-07-20',
-      readTime: '11 min read',
+      createdAt: new Date('2024-07-20'),
+      updatedAt: new Date('2024-07-20'),
       category: 'Mobile Testing',
       tags: ['Mobile', 'iOS', 'Android', 'UX Testing'],
-      image: '/api/placeholder/400/200'
+      featuredImage: '/api/placeholder/400/200',
+      status: 'published',
+      views: 0,
+      slug: 'mobile-app-testing-best-practices'
     }
   ];
 
@@ -112,6 +130,14 @@ export default function Blog() {
 
     fetchBlogPosts();
   }, []);
+
+  // Helper function to calculate read time
+  const getReadTime = (content: string) => {
+    const wordsPerMinute = 200;
+    const words = content.split(' ').length;
+    const minutes = Math.ceil(words / wordsPerMinute);
+    return `${minutes} min read`;
+  };
 
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -207,11 +233,11 @@ export default function Blog() {
                   </div>
                   <div className="flex items-center gap-1">
                     <Calendar className="h-4 w-4" />
-                    {new Date(filteredPosts[0].date).toLocaleDateString()}
+                    {new Date(filteredPosts[0].createdAt).toLocaleDateString()}
                   </div>
                   <div className="flex items-center gap-1">
                     <Clock className="h-4 w-4" />
-                    {filteredPosts[0].readTime}
+                    {getReadTime(filteredPosts[0].content)}
                   </div>
                 </div>
                 <Button className="bg-blue-600 hover:bg-blue-700" asChild>
@@ -229,7 +255,7 @@ export default function Blog() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredPosts.slice(1).map((post, index) => (
             <Card 
-              key={post.id}
+              key={post._id}
               className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-in slide-in-from-bottom duration-700"
               style={{ animationDelay: `${index * 100}ms` }}
             >
@@ -247,7 +273,7 @@ export default function Blog() {
                   <Badge variant="secondary" className="text-xs">
                     {post.category}
                   </Badge>
-                  <span className="text-xs text-gray-500">{post.readTime}</span>
+                  <span className="text-xs text-gray-500">{getReadTime(post.content)}</span>
                 </div>
                 
                 <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight">
@@ -268,7 +294,7 @@ export default function Blog() {
                 
                 <div className="flex items-center justify-between pt-2 border-t">
                   <div className="text-xs text-gray-500">
-                    {new Date(post.date).toLocaleDateString()}
+                    {new Date(post.createdAt).toLocaleDateString()}
                   </div>
                   <Button size="sm" variant="ghost" className="text-blue-600 hover:text-blue-700" asChild>
                     <Link to={`/blog/${post.slug || post._id}`}>
