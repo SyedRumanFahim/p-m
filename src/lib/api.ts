@@ -1,6 +1,6 @@
 // API client for frontend to communicate with backend
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://your-domain.vercel.app/api' 
+  ? 'https://p-m-chi.vercel.app/api' 
   : '/api';
 
 export interface BlogPost {
