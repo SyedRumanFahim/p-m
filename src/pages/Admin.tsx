@@ -38,6 +38,7 @@ export default function Admin() {
   const [isEditing, setIsEditing] = useState(false);
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [contactSubmissions, setContactSubmissions] = useState<ContactSubmission[]>([]);
+  const [newsletterSubscriber, setSubscribers] = useState<NewsletterSubscriber[]>([]);
   const [loading, setLoading] = useState(true);
   const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: '' });
   const [newPost, setNewPost] = useState({
@@ -52,12 +53,14 @@ export default function Admin() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [posts, submissions] = await Promise.all([
+        const [posts, submissions, subscribers] = await Promise.all([
           getBlogPosts(),
-          getContactSubmissions()
+          getContactSubmissions(),
+          getNewsletterSubscribers()
         ]);
         setBlogPosts(posts);
         setContactSubmissions(submissions);
+        setSubscribers(subscribers);
       } catch (error) {
         console.error('Error fetching admin data:', error);
         setSubmitStatus({ type: 'error', message: 'Failed to load data' });
@@ -219,6 +222,7 @@ export default function Admin() {
             <TabsTrigger value="posts">Manage Posts</TabsTrigger>
             <TabsTrigger value="create">Create New Post</TabsTrigger>
             <TabsTrigger value="contacts">Contact Messages</TabsTrigger>
+            <TabsTrigger value="subscribers">Newsletter Subscribers</TabsTrigger>
           </TabsList>
 
           {/* Manage Posts Tab */}
@@ -416,6 +420,47 @@ export default function Admin() {
                   {contactSubmissions.length === 0 && (
                     <div className="text-center py-8 text-gray-500">
                       <p>No contact messages found.</p>
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          {/* News Letter Subscribers Tab */}
+          <TabsContent value="subscribers" className="space-y-6">
+            <Card>
+              <CardHeader>
+                <CardTitle>Newsletter Subscribers</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  {newsletterSubscriber.map((subscribers) => (
+                    <div key={subscribers._id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                      <div className="space-y-3">
+                        <div className="flex items-start justify-between">
+                          <div className="space-y-1">
+                            <h3 className="font-semibold text-gray-900">{subscribers.status}</h3>
+                            <p className="text-sm text-gray-600">Email: {subscribers.email}</p>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            {/* <Badge variant={submission.status === 'new' ? 'default' : 'secondary'}>
+                              {submission.status}
+                            </Badge> */}
+                            <span className="text-xs text-gray-500">
+                              {new Date(subscribers.createdAt).toLocaleDateString()}
+                            </span>
+                          </div>
+                        </div>
+                        {/* <p className="text-sm text-gray-700 bg-gray-50 p-3 rounded">
+                          {submission.message}
+                        </p> */}
+                      </div>
+                    </div>
+                  ))}
+                  {contactSubmissions.length === 0 && (
+                    <div className="text-center py-8 text-gray-500">
+                      <p>No Newsletter Subscribers found.</p>
                     </div>
                   )}
                 </div>
