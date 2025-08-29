@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
+import Newsletter from '@/components/Newsletter';
 import { 
   Download, Mail, Phone, MapPin, Linkedin, Github, Play, 
   Calendar, Building, GraduationCap, Quote, Star, 
@@ -543,6 +544,21 @@ export default function Home() {
               <div className="font-medium">Location</div>
               <div className="text-sm text-gray-600">Dhaka, Bangladesh</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-16 px-4 bg-blue-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Stay Updated</h3>
+            <p className="text-lg text-gray-600">
+              Subscribe to get the latest insights on software testing and quality assurance
+            </p>
+          </div>
+          <div className="max-w-md mx-auto">
+            <Newsletter />
           </div>
         </div>
       </section>
