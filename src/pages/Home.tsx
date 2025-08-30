@@ -184,7 +184,8 @@ export default function Home() {
                   <div className="aspect-square bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center">
                     <div className="text-center space-y-2">
                       <div className="w-24 h-24 rounded-full bg-blue-200 mx-auto flex items-center justify-center">
-                        <span className="text-2xl font-bold text-blue-600">MF</span>
+                        {/* <span className="text-2xl font-bold text-blue-600">MF</span> */}
+                        <img src="./dist/assets/formal.jpeg" alt="" />
                       </div>
                       <p className="text-sm text-gray-600">Professional Photo</p>
                     </div>
