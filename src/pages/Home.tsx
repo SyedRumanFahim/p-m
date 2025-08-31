@@ -7,11 +7,17 @@ import {
   Download, Mail, Phone, MapPin, Linkedin, Github, Play, 
   Calendar, Building, GraduationCap, Quote, Star, 
   ExternalLink, FileText, TestTube, BarChart3,
-  ArrowRight, User, Clock
+  ArrowRight, User, Clock, PlayCircle
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function Home() {
+  const [showVideo, setShowVideo] = useState(false);
+  
+  // Add your YouTube video ID here (the part after v= in the YouTube URL)
+  const youtubeVideoId = "https://www.youtube.com/watch?v=5XChTz6egwQ"; 
+
   const skills = [
     'Manual Testing', 'Automation Testing', 'API Testing', 'Performance Testing',
     'Selenium', 'JMeter', 'Postman', 'Java', 'SQL', 'Agile', 'SDLC'
@@ -118,29 +124,40 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-in slide-in-from-left duration-700">
+      <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16 px-4 overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-10 -right-10 w-72 h-72 bg-blue-100 rounded-full opacity-20 blur-3xl"></div>
+          <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-indigo-100 rounded-full opacity-20 blur-3xl"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left Content - Personal Info */}
+            <div className="space-y-6 animate-in slide-in-from-left duration-700 order-2 lg:order-1">
               <div className="space-y-4">
-                <h1 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200">
+                  🚀 Available for Opportunities
+                </Badge>
+                <h1 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                   Mahmuda Ferdus
                 </h1>
-                <h2 className="text-2xl lg:text-3xl text-gray-700 font-medium">
-                  SQA Engineer
+                <h2 className="text-xl lg:text-2xl text-gray-700 font-medium">
+                  SQA Engineer | Quality Assurance Specialist
                 </h2>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-base text-gray-600 leading-relaxed">
                   Ensuring software excellence through comprehensive testing strategies, 
-                  automation frameworks, and quality assurance methodologies.
+                  automation frameworks, and quality assurance methodologies with 2+ years of experience.
                 </p>
               </div>
               
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              {/* CTA Buttons */}
+              <div className="flex flex-wrap gap-3">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all">
                   <Download className="mr-2 h-4 w-4" />
                   Download Resume
                 </Button>
-                <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50" asChild>
+                <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 shadow-md hover:shadow-lg transition-all" asChild>
                   <Link to="/contact">
                     <Mail className="mr-2 h-4 w-4" />
                     Contact Me
@@ -148,28 +165,30 @@ export default function Home() {
                 </Button>
               </div>
 
-              <div className="flex flex-wrap gap-6 pt-4">
-                <div className="flex items-center gap-2 text-gray-600">
+              {/* Contact Info */}
+              <div className="flex flex-col gap-3 pt-2">
+                <div className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
                   <Phone className="h-4 w-4" />
-                  <span>+8801823653263</span>
+                  <span className="text-sm">+8801823653263</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-600">
+                <div className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
                   <Mail className="h-4 w-4" />
-                  <span>mahmuda35-2382@diu.edu.bd</span>
+                  <span className="text-sm">mahmuda35-2382@diu.edu.bd</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600">
                   <MapPin className="h-4 w-4" />
-                  <span>Dhaka, Bangladesh</span>
+                  <span className="text-sm">Dhaka, Bangladesh</span>
                 </div>
               </div>
 
-              <div className="flex gap-4 pt-2">
-                <Button variant="ghost" size="sm" className="p-2" asChild>
+              {/* Social Links */}
+              <div className="flex gap-2 pt-2">
+                <Button variant="ghost" size="sm" className="hover:bg-blue-100 transition-all" asChild>
                   <a href="https://www.linkedin.com/in/mahmuda-ferdus-swe" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="h-5 w-5 text-blue-600" />
                   </a>
                 </Button>
-                <Button variant="ghost" size="sm" className="p-2" asChild>
+                <Button variant="ghost" size="sm" className="hover:bg-gray-100 transition-all" asChild>
                   <a href="https://github.com/MahmudaFerdusMim" target="_blank" rel="noopener noreferrer">
                     <Github className="h-5 w-5 text-gray-700" />
                   </a>
@@ -177,42 +196,89 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="space-y-6 animate-in slide-in-from-right duration-700 delay-200">
-              {/* Photo Placeholder */}
-              <Card className="overflow-hidden shadow-xl">
-                <CardContent className="p-0">
-                  <div className="aspect-square bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center">
-                    <div className="text-center space-y-2">
-                      <div className="w-24 h-24 rounded-full bg-blue-200 mx-auto flex items-center justify-center">
-                        {/* <span className="text-2xl font-bold text-blue-600">MF</span> */}
-                        <img src="/formal.jpeg" alt="my Photo" className="w-24 h-24 rounded-full object-cover" />
+            {/* Right Content - Photo and Video */}
+            <div className="space-y-6 animate-in slide-in-from-right duration-700 delay-200 order-1 lg:order-2">
+              {/* Professional Photo */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-2xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <Card className="relative overflow-hidden shadow-2xl border-0 bg-white/90 backdrop-blur">
+                  <CardContent className="p-0">
+                    <div className="relative">
+                      <img 
+                        src="/formal.jpeg" 
+                        alt="Mahmuda Ferdus - SQA Engineer"
+                        className="w-full h-auto object-cover rounded-t-lg"
+                        style={{ maxHeight: '450px' }}
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                        <p className="text-white font-semibold text-lg">Mahmuda Ferdus</p>
+                        <p className="text-white/90 text-sm">SQA Engineer</p>
                       </div>
-                      <p className="text-sm text-gray-600">Professional Photo</p>
                     </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Video Resume */}
+              <Card className="relative overflow-hidden shadow-xl border-0 bg-gradient-to-br from-blue-600 to-indigo-600 text-white group hover:shadow-2xl transition-all">
+                <CardContent className="p-6">
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="text-lg font-bold flex items-center gap-2">
+                          <PlayCircle className="h-5 w-5" />
+                          Video Resume
+                        </h3>
+                        <p className="text-sm text-white/80 mt-1">
+                          2-minute introduction
+                        </p>
+                      </div>
+                      <div className="bg-white/20 rounded-full p-3 group-hover:bg-white/30 transition-colors">
+                        <Play className="h-6 w-6" />
+                      </div>
+                    </div>
+                    
+                    {!showVideo ? (
+                      <Button 
+                        onClick={() => setShowVideo(true)}
+                        className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold"
+                      >
+                        <Play className="mr-2 h-4 w-4" />
+                        Watch Video Resume
+                      </Button>
+                    ) : (
+                      <div className="aspect-video rounded-lg overflow-hidden">
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1`}
+                          title="Video Resume - Mahmuda Ferdus"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-full"
+                        ></iframe>
+                      </div>
+                    )}
                   </div>
                 </CardContent>
               </Card>
 
-              {/* Video Resume Placeholder */}
-              <Card className="overflow-hidden shadow-lg">
-                <CardContent className="p-0">
-                  {/* <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center cursor-pointer hover:bg-gray-200 transition-colors">
-                    <div className="text-center space-y-2">
-                      <Play className="w-12 h-12 text-gray-600 mx-auto" />
-                      <p className="text-sm text-gray-600">Video Resume</p>
-                    </div>
-                  </div> */}
-                  <div className="aspect-video w-full">
-        <iframe
-          className="w-full h-full"
-          src="https://www.youtube.com/watch?v=5XChTz6egwQ"
-          title="my Resume"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
-                </CardContent>
-              </Card>
+              {/* Quick Highlights */}
+              <div className="grid grid-cols-2 gap-3">
+                <Card className="bg-blue-50 border-blue-200 hover:shadow-lg transition-all">
+                  <CardContent className="p-4 text-center">
+                    <div className="text-2xl font-bold text-blue-600">2+</div>
+                    <div className="text-xs text-gray-600">Years Experience</div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-indigo-50 border-indigo-200 hover:shadow-lg transition-all">
+                  <CardContent className="p-4 text-center">
+                    <div className="text-2xl font-bold text-indigo-600">10+</div>
+                    <div className="text-xs text-gray-600">Projects Tested</div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
