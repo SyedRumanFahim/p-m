@@ -218,7 +218,7 @@ export default function Admin() {
 
         {/* Main Content */}
         <Tabs defaultValue="posts" className="animate-in slide-in-from-bottom duration-700 delay-300">
-          <TabsList className="grid w-full grid-cols-4">
+          <TabsList className="grid w-full grid-cols-3">
             <TabsTrigger value="posts">Manage Posts</TabsTrigger>
             <TabsTrigger value="create">Create New Post</TabsTrigger>
             <TabsTrigger value="contacts">Contact Messages</TabsTrigger>
