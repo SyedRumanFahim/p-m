@@ -16,7 +16,7 @@ export default function Home() {
   const [showVideo, setShowVideo] = useState(false);
   
   // Add your YouTube video ID here (the part after v= in the YouTube URL)
-  const youtubeVideoId = "https://www.youtube.com/watch?v=5XChTz6egwQ"; 
+  const youtubeVideoId = "5XChTz6egwQ?si=V-ULqHzJ2ho5801n"; 
 
   const skills = [
     'Manual Testing', 'Automation Testing', 'API Testing', 'Performance Testing',
@@ -194,6 +194,21 @@ export default function Home() {
                   </a>
                 </Button>
               </div>
+              {/* Quick Highlights */}
+              <div className="grid grid-cols-2 gap-3">
+                <Card className="bg-blue-50 border-blue-200 hover:shadow-lg transition-all">
+                  <CardContent className="p-4 text-center">
+                    <div className="text-2xl font-bold text-blue-600">2+</div>
+                    <div className="text-xs text-gray-600">Years Experience</div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-indigo-50 border-indigo-200 hover:shadow-lg transition-all">
+                  <CardContent className="p-4 text-center">
+                    <div className="text-2xl font-bold text-indigo-600">10+</div>
+                    <div className="text-xs text-gray-600">Projects Tested</div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
 
             {/* Right Content - Photo and Video */}
@@ -263,22 +278,6 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
-
-              {/* Quick Highlights */}
-              <div className="grid grid-cols-2 gap-3">
-                <Card className="bg-blue-50 border-blue-200 hover:shadow-lg transition-all">
-                  <CardContent className="p-4 text-center">
-                    <div className="text-2xl font-bold text-blue-600">2+</div>
-                    <div className="text-xs text-gray-600">Years Experience</div>
-                  </CardContent>
-                </Card>
-                <Card className="bg-indigo-50 border-indigo-200 hover:shadow-lg transition-all">
-                  <CardContent className="p-4 text-center">
-                    <div className="text-2xl font-bold text-indigo-600">10+</div>
-                    <div className="text-xs text-gray-600">Projects Tested</div>
-                  </CardContent>
-                </Card>
-              </div>
             </div>
           </div>
         </div>
