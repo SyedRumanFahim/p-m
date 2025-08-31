@@ -185,7 +185,7 @@ export default function Home() {
                     <div className="text-center space-y-2">
                       <div className="w-24 h-24 rounded-full bg-blue-200 mx-auto flex items-center justify-center">
                         {/* <span className="text-2xl font-bold text-blue-600">MF</span> */}
-                        <img src="/public/formal.jpeg" alt="" />
+                        <img src="/formal.jpeg" alt="my Photo" className="w-24 h-24 rounded-full object-cover" />
                       </div>
                       <p className="text-sm text-gray-600">Professional Photo</p>
                     </div>
@@ -196,12 +196,21 @@ export default function Home() {
               {/* Video Resume Placeholder */}
               <Card className="overflow-hidden shadow-lg">
                 <CardContent className="p-0">
-                  <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center cursor-pointer hover:bg-gray-200 transition-colors">
+                  {/* <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center cursor-pointer hover:bg-gray-200 transition-colors">
                     <div className="text-center space-y-2">
                       <Play className="w-12 h-12 text-gray-600 mx-auto" />
                       <p className="text-sm text-gray-600">Video Resume</p>
                     </div>
-                  </div>
+                  </div> */}
+                  <div className="aspect-video w-full">
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/watch?v=5XChTz6egwQ"
+          title="my Resume"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
                 </CardContent>
               </Card>
             </div>
