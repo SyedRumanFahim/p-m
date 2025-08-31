@@ -222,7 +222,7 @@ export default function Home() {
                       <img 
                         src="/formal.jpeg" 
                         alt="Mahmuda Ferdus - SQA Engineer"
-                        className="w-full h-auto object-cover rounded-t-lg"
+                        className="w-full h-auto rounded-t-lg"
                         style={{ maxHeight: '450px' }}
                       />
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
