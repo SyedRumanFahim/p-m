@@ -54,7 +54,7 @@ export default function Resume() {
       company: 'Beacontech Limited',
       period: 'December 2022 - February 2023',
       location: 'Dhaka, Bangladesh',
-      type: 'Internship',
+      type: 'Full-time',
       responsibilities: [
         'Performed manual testing on HRMS and Payroll modules of Beacon ERP.',
         'Participated in requirement analysis sessions to align test scenarios with business needs.',

@@ -23,8 +23,8 @@ export default function Portfolio() {
     },
     {
       id: 2,
-      title: 'SaaS ERP Testing Suite',
-      description: 'Complete testing framework for multi-platform SaaS ERP solution including API, UI/UX, Android, iOS, and Web applications. Implemented automated testing strategies within Agile methodology.',
+      title: 'TNC Global SaaS ERP Testing Suite',
+      description: 'Complete testing framework for multi-platform SaaS ERP solution including API, UI/UX, Android, iOS, and Web applications. The platform is all in one place for Buyer, Merchandiser, Consumer, Vendor etc.',
       category: 'Multi-Platform Testing',
       tools: ['Selenium', 'API Testing', 'Mobile Testing', 'Postman', 'Agile'],
       achievements: [
@@ -37,8 +37,8 @@ export default function Portfolio() {
     },
     {
       id: 3,
-      title: 'Beacon ERP Quality Assurance',
-      description: 'End-to-end testing of enterprise resource planning modules including Merchandising, Procurement, Store, Production, Planning, and Shipment. Collaborated with development team for continuous improvement.',
+      title: 'Beacon ERP',
+      description: 'End-to-end testing of enterprise resource planning modules including HRMS, Payroll, Merchandising, Procurement, Store, Production, Planning, and Shipment. Collaborated with development team for continuous improvement.',
       category: 'Enterprise Software Testing',
       tools: ['Manual Testing', 'GUI Testing', 'UAT', 'Defect Tracking', 'Trello'],
       achievements: [
@@ -48,49 +48,49 @@ export default function Portfolio() {
       ],
       icon: <BarChart3 className="h-6 w-6" />,
       color: 'bg-purple-500'
-    },
-    {
-      id: 4,
-      title: 'Performance Testing Framework',
-      description: 'Developed comprehensive performance testing strategies using JMeter for load testing, stress testing, and scalability analysis of web applications under various load conditions.',
-      category: 'Performance Testing',
-      tools: ['JMeter', 'Performance Testing', 'Load Testing', 'Stress Testing'],
-      achievements: [
-        'Identified performance bottlenecks',
-        'Optimized system response time by 35%',
-        'Created reusable performance test scripts'
-      ],
-      icon: <BarChart3 className="h-6 w-6" />,
-      color: 'bg-orange-500'
-    },
-    {
-      id: 5,
-      title: 'API Testing Automation',
-      description: 'Comprehensive API testing suite using Postman and custom automation scripts. Validated REST APIs, data integrity, error handling, and security aspects across multiple microservices.',
-      category: 'API Testing',
-      tools: ['Postman', 'API Testing', 'Automation', 'JSON', 'REST'],
-      achievements: [
-        'Automated 90% of API test cases',
-        'Improved API reliability by 45%',
-        'Created comprehensive API documentation'
-      ],
-      icon: <TestTube className="h-6 w-6" />,
-      color: 'bg-indigo-500'
-    },
-    {
-      id: 6,
-      title: 'Test Strategy Documentation',
-      description: 'Developed comprehensive test strategies, test plans, and documentation frameworks for various projects. Created standardized testing procedures and quality gates.',
-      category: 'Test Documentation',
-      tools: ['Test Planning', 'Documentation', 'Quality Gates', 'Process Improvement'],
-      achievements: [
-        'Standardized testing processes across teams',
-        'Reduced onboarding time for new QA engineers',
-        'Improved test coverage by 60%'
-      ],
-      icon: <FileText className="h-6 w-6" />,
-      color: 'bg-teal-500'
     }
+    // {
+    //   id: 4,
+    //   title: 'Performance Testing Framework',
+    //   description: 'Developed comprehensive performance testing strategies using JMeter for load testing, stress testing, and scalability analysis of web applications under various load conditions.',
+    //   category: 'Performance Testing',
+    //   tools: ['JMeter', 'Performance Testing', 'Load Testing', 'Stress Testing'],
+    //   achievements: [
+    //     'Identified performance bottlenecks',
+    //     'Optimized system response time by 35%',
+    //     'Created reusable performance test scripts'
+    //   ],
+    //   icon: <BarChart3 className="h-6 w-6" />,
+    //   color: 'bg-orange-500'
+    // },
+    // {
+    //   id: 5,
+    //   title: 'API Testing Automation',
+    //   description: 'Comprehensive API testing suite using Postman and custom automation scripts. Validated REST APIs, data integrity, error handling, and security aspects across multiple microservices.',
+    //   category: 'API Testing',
+    //   tools: ['Postman', 'API Testing', 'Automation', 'JSON', 'REST'],
+    //   achievements: [
+    //     'Automated 90% of API test cases',
+    //     'Improved API reliability by 45%',
+    //     'Created comprehensive API documentation'
+    //   ],
+    //   icon: <TestTube className="h-6 w-6" />,
+    //   color: 'bg-indigo-500'
+    // },
+    // {
+    //   id: 6,
+    //   title: 'Test Strategy Documentation',
+    //   description: 'Developed comprehensive test strategies, test plans, and documentation frameworks for various projects. Created standardized testing procedures and quality gates.',
+    //   category: 'Test Documentation',
+    //   tools: ['Test Planning', 'Documentation', 'Quality Gates', 'Process Improvement'],
+    //   achievements: [
+    //     'Standardized testing processes across teams',
+    //     'Reduced onboarding time for new QA engineers',
+    //     'Improved test coverage by 60%'
+    //   ],
+    //   icon: <FileText className="h-6 w-6" />,
+    //   color: 'bg-teal-500'
+    // }
   ];
 
   const [selectedCategory, setSelectedCategory] = useState('All');

@@ -72,7 +72,7 @@ export default function Footer() {
                 <Github className="h-4 w-4" />
               </a>
               <a
-                href="mailto:mahmuda35-2382@diu.edu.bd"
+                href="mailto:mahmudaferdus.swe@gmail.com"
                 className="p-2 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors"
               >
                 <Mail className="h-4 w-4" />
@@ -140,10 +140,10 @@ export default function Footer() {
               <div className="flex items-center space-x-3 text-sm">
                 <Mail className="h-4 w-4 text-blue-400" />
                 <a 
-                  href="mailto:mahmuda35-2382@diu.edu.bd"
+                  href="mailto:mahmudaferdus.swe@gmail.com"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  mahmuda35-2382@diu.edu.bd
+                  mahmudaferdus.swe@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-sm">

@@ -68,12 +68,14 @@ export default function About() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-gray-700 leading-relaxed">
-              To utilize my expertise in software quality assurance, gained through diverse experience in testing various applications 
-              and collaborating within Agile teams. I want to contribute effectively to the success of projects I am involved in.
+              A dedicated and analytical SQA Engineer with 2+ years of experience, passionate about ensuring exceptional
+software quality and user experience. Proficient in creating detailed test plans, identifying critical defects
+through manual and API testing, and collaborating within Agile teams.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Seeking a challenging role where I can leverage my skills in manual and automation testing to ensure the delivery 
-              of high-quality software solutions while continuously improving processes and methodologies.
+              I am actively expanding my skillset
+into automation with Java and Selenium to help build more efficient testing cycles and deliver robust, high-
+performance products.
             </p>
           </CardContent>
         </Card>

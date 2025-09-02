@@ -146,7 +146,7 @@ export default function Navigation() {
                     GitHub
                   </a>
                   <a
-                    href="mailto:mahmuda35-2382@diu.edu.bd"
+                    href="mailto:mahmudaferdus.swe@gmail.com"
                     className="text-gray-600 hover:text-blue-600 transition-colors"
                   >
                     Email

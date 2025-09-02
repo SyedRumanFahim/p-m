@@ -36,7 +36,7 @@ export default function Newsletter() {
           <CheckCircle className="h-12 w-12 text-green-500 mx-auto mb-4" />
           <h3 className="text-lg font-semibold text-green-900 mb-2">Successfully Subscribed!</h3>
           <p className="text-green-700 text-sm">
-            Thank you for subscribing to our newsletter. You'll receive updates about new blog posts and QA insights.
+            Thank you for subscribing to my newsletter. You'll receive updates about new blog posts and QA insights.
           </p>
         </CardContent>
       </Card>

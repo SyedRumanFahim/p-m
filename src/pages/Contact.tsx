@@ -57,8 +57,8 @@ export default function Contact() {
     {
       icon: <Mail className="h-6 w-6" />,
       label: 'Email',
-      value: 'mahmuda35-2382@diu.edu.bd',
-      link: 'mailto:mahmuda35-2382@diu.edu.bd'
+      value: 'mahmudaferdus.swe@gmail.com',
+      link: 'mailto:mahmudaferdus.swe@gmail.com'
     },
     {
       icon: <Phone className="h-6 w-6" />,

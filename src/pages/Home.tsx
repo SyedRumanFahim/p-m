@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { title } from 'process';
 
 export default function Home() {
   const [showVideo, setShowVideo] = useState(false);
@@ -50,6 +51,12 @@ export default function Home() {
       company: 'Beacontech Limited',
       period: 'March 2023 - March 2024',
       type: 'Full-time'
+    },
+    {
+      title: 'Trainee SQA Engineer',
+      company: 'Beacontech Limited',
+      period: 'December 2022 - February 2023',
+      type: 'Full-time'
     }
   ];
 
@@ -65,8 +72,8 @@ export default function Home() {
     },
     {
       id: 2,
-      title: 'SaaS ERP Testing Suite',
-      description: 'Complete testing framework for multi-platform SaaS ERP solution including API, UI/UX, Android, iOS, and Web applications.',
+      title: 'TNC Global SaaS ERP Testing Suite',
+      description: 'Complete testing framework for multi-platform SaaS ERP solution including API, UI/UX, Android, iOS, and Web applications. The platform is all in one place for Buyer, Merchandiser, Consumer, Vendor etc.',
       category: 'Multi-Platform Testing',
       tools: ['Selenium', 'API Testing', 'Mobile Testing', 'Postman', 'Agile'],
       icon: <TestTube className="h-6 w-6" />,
@@ -74,28 +81,28 @@ export default function Home() {
     },
     {
       id: 3,
-      title: 'Performance Testing Framework',
-      description: 'Developed comprehensive performance testing strategies using JMeter for load testing and scalability analysis.',
-      category: 'Performance Testing',
-      tools: ['JMeter', 'Performance Testing', 'Load Testing', 'Stress Testing'],
+      title: 'Beacon ERP Quality Assurance',
+      description: 'End-to-end testing of enterprise resource planning modules including HRMS, Payroll, Merchandising, Procurement, Store, Production, Planning, and Shipment. Collaborated with development team for continuous improvement.',
+      category: 'Enterprise Software Testing',
+      tools: ['Manual Testing', 'GUI Testing', 'UAT', 'Defect Tracking', 'Trello'],
       icon: <BarChart3 className="h-6 w-6" />,
-      color: 'bg-orange-500'
+      color: 'bg-purple-500'
     }
   ];
 
   const testimonials = [
     {
       name: 'Ehsanul Alam Sabbir',
-      role: 'Software Engineer (QA)',
-      company: 'Cefalo Bangladesh Ltd',
+      role: 'Staff SQA Engineer',
+      company: 'Vivasoft Limited',
       text: "Mahmuda is an exceptional QA engineer with a keen eye for detail. Her systematic approach to testing has been invaluable to our projects.",
       rating: 5
     },
     {
-      name: 'Sarah Johnson',
-      role: 'Project Manager',
-      company: 'TNC Global Limited',
-      text: "Working with Mahmuda on our SaaS ERP project was a great experience. Her multi-platform testing expertise helped us deliver a robust product.",
+      name: 'Suvasish Chowdhury',
+      role: 'Sr. Software Engineer',
+      company: 'Beacontech Limited',
+      text: "Working with Mahmuda on our Beacon ERP project was a great experience. Her multi-platform testing expertise helped us deliver a robust product.",
       rating: 5
     }
   ];
@@ -173,7 +180,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
                   <Mail className="h-4 w-4" />
-                  <span className="text-sm">mahmuda35-2382@diu.edu.bd</span>
+                  <span className="text-sm">mahmudaferdus.swe@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600">
                   <MapPin className="h-4 w-4" />
@@ -344,8 +351,11 @@ export default function Home() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-gray-700 leading-relaxed">
-                  To utilize my expertise in software quality assurance, gained through diverse experience in testing various applications 
-                  and collaborating within Agile teams. I want to contribute effectively to the success of projects I am involved in.
+                  A dedicated and analytical SQA Engineer with 2+ years of experience, passionate about ensuring exceptional
+software quality and user experience. Proficient in creating detailed test plans, identifying critical defects
+through manual and API testing, and collaborating within Agile teams. I am actively expanding my skillset
+into automation with Java and Selenium to help build more efficient testing cycles and deliver robust, high-
+performance products.
                 </p>
                 <Button variant="outline" asChild>
                   <Link to="/about">
@@ -608,7 +618,7 @@ export default function Home() {
             <div className="text-center space-y-2">
               <Mail className="h-8 w-8 text-blue-600 mx-auto" />
               <div className="font-medium">Email</div>
-              <div className="text-sm text-gray-600">mahmuda35-2382@diu.edu.bd</div>
+              <div className="text-sm text-gray-600">mahmudaferdus.swe@gmail.com</div>
             </div>
             <div className="text-center space-y-2">
               <Phone className="h-8 w-8 text-blue-600 mx-auto" />

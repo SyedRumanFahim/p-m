@@ -171,7 +171,7 @@ export default function Testimonials() {
           <p className="text-gray-600 mb-6">Let's discuss how I can help ensure the quality of your software projects</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a 
-              href="mailto:mahmuda35-2382@diu.edu.bd" 
+              href="mailto:mahmudaferdus.swe@gmail.com" 
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
             >
               Contact Me
