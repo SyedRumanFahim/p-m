@@ -12,12 +12,12 @@ export default function Resume() {
       location: 'Dhaka, Bangladesh',
       type: 'Full-time',
       responsibilities: [
-        'Working with various projects including Library Management System of Bangla Academy and all District Public Libraries',
-        'Testing Document Management System, User Management System, E-Book and E-Clipping management System',
-        'Quality assurance for Id Card Management System, Bag Management System, Visitor management System',
-        'Implementing comprehensive test strategies for government and institutional projects'
+        'Worked on multiple projects including Library Management System, Document Management System, E-Book & E-Clipping Management System, Visitor Management System, Kiosk Software, Internal office chat application, Task Management System, etc',
+        'Conducted manual and API testing to ensure functionality, usability, and performance.',
+        'Collaborated with cross-functional teams to identify and resolve defects in a timely manner.',
+        'Participated in Agile ceremonies and contributed to sprint planning and quality deliverables.'
       ],
-      skills: ['Manual Testing', 'System Testing', 'Government Projects', 'Documentation']
+      skills: ['Library Management System', 'Document Management System', 'E-Book & E-Clipping', 'Visitor Management System', 'Kiosk Software', 'Internal office chat application', 'Task Management System']
     },
     {
       title: 'SQA Engineer',
@@ -26,12 +26,12 @@ export default function Resume() {
       location: 'Dhaka, Bangladesh',
       type: 'Full-time',
       responsibilities: [
-        'Testing API, UI/UX, Android and iOS, Web App simultaneously for upcoming SaaS platform',
-        'Actively participating in Agile methodology with development team',
-        'Guiding junior team members to complete assigned tasks effectively',
-        'Cross-platform testing and quality assurance for multi-device compatibility'
+        'Performed manual and API testing for SaaS ERP across Web and Android platforms.',
+        'Conducted UI/UX validation to ensure smooth user experience across applications.',
+        'Actively participated in Agile methodology including sprint reviews and retrospectives',
+        'Guided junior team members to improve testing efficiency and task completion'
       ],
-      skills: ['API Testing', 'Mobile Testing', 'Agile', 'Mentoring', 'Cross-platform Testing']
+      skills: ['TNC Saas ERP']
     },
     {
       title: 'Jr. SQA Engineer',
@@ -40,13 +40,14 @@ export default function Resume() {
       location: 'Dhaka, Bangladesh',
       type: 'Full-time',
       responsibilities: [
-        'Working on Merchandising, Procurement, Store, Production, planning, Shipment modules of Beacon ERP',
-        'Collaborating with software developers for new features, improvements and bug fixing',
-        'Following up and maintaining defect lifecycle with the team',
-        'Performing UAT and GUI Testing, conducting user manual sessions',
-        'Providing continuous customer support and participating in software implementation for new clients'
+        'Beacon ERP: Tested Beacon ERP modules: Merchandising, Procurement, Store, Production, Planning, and Shipment',
+        'Collaborated with developers to verify new features, enhancements, and bug fixes.',
+        'Tracked and maintained the defect lifecycle using QA tools.',
+        'Conducted UAT and GUI testing to validate system functionality',
+        'Delivered training sessions and user manual walkthroughs to clients',
+        'Provided continuous customer support and participated in client software implementations.'
       ],
-      skills: ['ERP Testing', 'UAT', 'GUI Testing', 'Customer Support', 'Implementation']
+      skills: ['Beacon ERP', 'Salesforce ERP', 'EPS Payment Gateway']
     },
     {
       title: 'Trainee SQA Engineer',
@@ -55,13 +56,14 @@ export default function Resume() {
       location: 'Dhaka, Bangladesh',
       type: 'Internship',
       responsibilities: [
-        'Worked on HRMS and Payroll module testing and validation',
-        'Participated in requirement analysis and test planning',
-        'Prepared comprehensive Test Case documents and performed manual testing',
-        'Bug Reporting and Tracking using Trello for efficient defect management',
-        'Conducted Regression Testing to ensure system stability'
+        'Performed manual testing on HRMS and Payroll modules of Beacon ERP.',
+        'Participated in requirement analysis sessions to align test scenarios with business needs.',
+        'Designed and executed detailed test cases, ensuring coverage of functional requirements.',
+        'Conducted regression testing to validate fixes and maintain system stability.',
+        'Reported and tracked defects using Trello, collaborating with the development team for timely resolution.',
+        'Assisted in improving the defect management process by identifying issues early in the SDLC, which helped the team deliver a more stable release'
       ],
-      skills: ['HRMS Testing', 'Test Case Design', 'Bug Tracking', 'Regression Testing'],
+      skills: ['HRMS', 'Payroll'],
       achievement: 'Made HRMS and Payroll module stable by helping dev team fix bugs faster by raising them early in SDLC'
     }
   ];

@@ -124,7 +124,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16 px-4 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16 px-4">
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-10 -right-10 w-72 h-72 bg-blue-100 rounded-full opacity-20 blur-3xl"></div>
@@ -194,6 +194,21 @@ export default function Home() {
                   </a>
                 </Button>
               </div>
+              {/* Quick Highlights */}
+              <div className="grid grid-cols-2 gap-3">
+                <Card className="bg-blue-50 border-blue-200 hover:shadow-lg transition-all">
+                  <CardContent className="p-4 text-center">
+                    <div className="text-2xl font-bold text-blue-600">2+</div>
+                    <div className="text-xs text-gray-600">Years Experience</div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-indigo-50 border-indigo-200 hover:shadow-lg transition-all">
+                  <CardContent className="p-4 text-center">
+                    <div className="text-2xl font-bold text-indigo-600">10+</div>
+                    <div className="text-xs text-gray-600">Projects Tested</div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
 
             {/* Right Content - Photo and Video */}
@@ -207,7 +222,7 @@ export default function Home() {
                       <img 
                         src="/formal.jpeg" 
                         alt="Mahmuda Ferdus - SQA Engineer"
-                        className="w-full h-auto rounded-t-lg"
+                        className="w-full h-auto object-cover rounded-t-lg"
                         style={{ maxHeight: '450px' }}
                       />
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
@@ -263,6 +278,7 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
+
             </div>
           </div>
         </div>
