@@ -68,7 +68,7 @@ export default function About() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-gray-700 leading-relaxed">
-              A dedicated and analytical SQA Engineer with 2+ years of experience, passionate about ensuring exceptional
+              A dedicated and analytical SQA Engineer with 3+ years of experience, passionate about ensuring exceptional
 software quality and user experience. Proficient in creating detailed test plans, identifying critical defects
 through manual and API testing, and collaborating within Agile teams.
             </p>

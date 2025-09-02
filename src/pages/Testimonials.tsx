@@ -7,8 +7,8 @@ export default function Testimonials() {
     {
       id: 1,
       name: 'Ehsanul Alam Sabbir',
-      role: 'Software Engineer (QA)',
-      company: 'Cefalo Bangladesh Ltd',
+      role: 'Staff SQA Engineer',
+      company: 'Vivasoft Limited',
       image: '/api/placeholder/80/80',
       rating: 5,
       text: "Mahmuda is an exceptional QA engineer with a keen eye for detail. Her systematic approach to testing and ability to identify critical bugs early in the development cycle has been invaluable to our projects. She consistently delivers high-quality work and mentors junior team members effectively.",
@@ -16,54 +16,54 @@ export default function Testimonials() {
     },
     {
       id: 2,
-      name: 'Sarah Johnson',
-      role: 'Project Manager',
-      company: 'TNC Global Limited',
+      name: 'Suvasish Chowdhury',
+      role: 'Sr. Software Engineer',
+      company: 'Beacontech Limited',
       image: '/api/placeholder/80/80',
       rating: 5,
-      text: "Working with Mahmuda on our SaaS ERP project was a great experience. Her multi-platform testing expertise and agile methodology knowledge helped us deliver a robust product. She's proactive in communication and always meets deadlines.",
+      text: "Working with Mahmuda on our Beacon ERP project was a great experience. Her multi-platform testing expertise helped us deliver a robust product.",
       skills: ['Multi-platform Testing', 'Agile Methodology', 'Communication']
     },
     {
       id: 3,
-      name: 'Ahmed Rahman',
-      role: 'Senior Developer',
-      company: 'Beacontech Limited',
+      name: 'Syed Ruman',
+      role: 'Sr. Software Engineer',
+      company: 'Krishibid Group, Ex: Beacontech Limited',
       image: '/api/placeholder/80/80',
       rating: 5,
       text: "Mahmuda's contribution to stabilizing our HRMS and Payroll modules was outstanding. Her thorough testing approach and excellent bug reporting helped us fix issues faster and improve our development process significantly.",
       skills: ['Bug Reporting', 'Process Improvement', 'ERP Testing']
-    },
-    {
-      id: 4,
-      name: 'Dr. Lisa Chen',
-      role: 'Quality Assurance Lead',
-      company: 'Tech Solutions Inc',
-      image: '/api/placeholder/80/80',
-      rating: 5,
-      text: "I've had the pleasure of reviewing Mahmuda's test documentation and strategies. Her comprehensive approach to test case design and regression testing is exemplary. She has a bright future in quality assurance.",
-      skills: ['Test Documentation', 'Regression Testing', 'Strategic Planning']
-    },
-    {
-      id: 5,
-      name: 'Michael Torres',
-      role: 'DevOps Engineer',
-      company: 'Interlink Techsoft Limited',
-      image: '/api/placeholder/80/80',
-      rating: 5,
-      text: "Mahmuda's work on our government projects, especially the Library Management System, showcased her ability to handle complex, multi-stakeholder projects. Her attention to user experience and system reliability is commendable.",
-      skills: ['Government Projects', 'User Experience', 'System Reliability']
-    },
-    {
-      id: 6,
-      name: 'Jennifer Park',
-      role: 'Product Owner',
-      company: 'Digital Innovation Labs',
-      image: '/api/placeholder/80/80',
-      rating: 5,
-      text: "Mahmuda's performance testing expertise helped us optimize our application's response time significantly. Her detailed analysis and actionable recommendations made a real difference in our product's performance.",
-      skills: ['Performance Testing', 'Analysis', 'Optimization']
     }
+    // {
+    //   id: 4,
+    //   name: 'Dr. Lisa Chen',
+    //   role: 'Quality Assurance Lead',
+    //   company: 'Tech Solutions Inc',
+    //   image: '/api/placeholder/80/80',
+    //   rating: 5,
+    //   text: "I've had the pleasure of reviewing Mahmuda's test documentation and strategies. Her comprehensive approach to test case design and regression testing is exemplary. She has a bright future in quality assurance.",
+    //   skills: ['Test Documentation', 'Regression Testing', 'Strategic Planning']
+    // },
+    // {
+    //   id: 5,
+    //   name: 'Michael Torres',
+    //   role: 'DevOps Engineer',
+    //   company: 'Interlink Techsoft Limited',
+    //   image: '/api/placeholder/80/80',
+    //   rating: 5,
+    //   text: "Mahmuda's work on our government projects, especially the Library Management System, showcased her ability to handle complex, multi-stakeholder projects. Her attention to user experience and system reliability is commendable.",
+    //   skills: ['Government Projects', 'User Experience', 'System Reliability']
+    // },
+    // {
+    //   id: 6,
+    //   name: 'Jennifer Park',
+    //   role: 'Product Owner',
+    //   company: 'Digital Innovation Labs',
+    //   image: '/api/placeholder/80/80',
+    //   rating: 5,
+    //   text: "Mahmuda's performance testing expertise helped us optimize our application's response time significantly. Her detailed analysis and actionable recommendations made a real difference in our product's performance.",
+    //   skills: ['Performance Testing', 'Analysis', 'Optimization']
+    // }
   ];
 
   const stats = [
@@ -154,8 +154,8 @@ export default function Testimonials() {
             <div className="bg-blue-50 p-6 rounded-lg">
               <div className="space-y-3">
                 <h4 className="text-lg font-semibold text-gray-900">Ehsanul Alam Sabbir</h4>
-                <p className="text-gray-700">Software Engineer (QA) at Cefalo Bangladesh Ltd</p>
-                <p className="text-gray-700">Trainer, IT Training BD</p>
+                <p className="text-gray-700">Staff SQA Engineer at Vivasoft Ltd</p>
+                <p className="text-gray-700">Ex-Trainer, IT Training BD</p>
                 <div className="flex flex-wrap gap-4 text-sm text-gray-600 pt-2">
                   <span>Cell: +8801670102216</span>
                   <span>Email: easabbir@gmail.com</span>

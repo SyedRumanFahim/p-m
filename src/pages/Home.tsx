@@ -154,7 +154,7 @@ export default function Home() {
                 </h2>
                 <p className="text-base text-gray-600 leading-relaxed">
                   Ensuring software excellence through comprehensive testing strategies, 
-                  automation frameworks, and quality assurance methodologies with 2+ years of experience.
+                  automation frameworks, and quality assurance methodologies with 3+ years of experience.
                 </p>
               </div>
               
@@ -205,13 +205,13 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-3">
                 <Card className="bg-blue-50 border-blue-200 hover:shadow-lg transition-all">
                   <CardContent className="p-4 text-center">
-                    <div className="text-2xl font-bold text-blue-600">2+</div>
+                    <div className="text-2xl font-bold text-blue-600">3+</div>
                     <div className="text-xs text-gray-600">Years Experience</div>
                   </CardContent>
                 </Card>
                 <Card className="bg-indigo-50 border-indigo-200 hover:shadow-lg transition-all">
                   <CardContent className="p-4 text-center">
-                    <div className="text-2xl font-bold text-indigo-600">10+</div>
+                    <div className="text-2xl font-bold text-indigo-600">15+</div>
                     <div className="text-xs text-gray-600">Projects Tested</div>
                   </CardContent>
                 </Card>
@@ -296,20 +296,20 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center animate-in slide-in-from-bottom duration-700">
-              <div className="text-3xl font-bold text-blue-600 mb-2">2+</div>
-              <div className="text-gray-600">Years Experience</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>
+              <div className="text-gray-600">Client Satisfaction</div>
             </div>
             <div className="text-center animate-in slide-in-from-bottom duration-700 delay-100">
-              <div className="text-3xl font-bold text-blue-600 mb-2">10+</div>
-              <div className="text-gray-600">Projects Tested</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">100%</div>
+              <div className="text-gray-600">Team Recommendation</div>
             </div>
             <div className="text-center animate-in slide-in-from-bottom duration-700 delay-200">
-              <div className="text-3xl font-bold text-blue-600 mb-2">1000+</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">2000+</div>
               <div className="text-gray-600">Test Cases</div>
             </div>
             <div className="text-center animate-in slide-in-from-bottom duration-700 delay-300">
-              <div className="text-3xl font-bold text-blue-600 mb-2">3.82</div>
-              <div className="text-gray-600">CGPA</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">95%</div>
+              <div className="text-gray-600">Bug Detection Rate</div>
             </div>
           </div>
         </div>
@@ -351,7 +351,7 @@ export default function Home() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-gray-700 leading-relaxed">
-                  A dedicated and analytical SQA Engineer with 2+ years of experience, passionate about ensuring exceptional
+                  A dedicated and analytical SQA Engineer with 3+ years of experience, passionate about ensuring exceptional
 software quality and user experience. Proficient in creating detailed test plans, identifying critical defects
 through manual and API testing, and collaborating within Agile teams. I am actively expanding my skillset
 into automation with Java and Selenium to help build more efficient testing cycles and deliver robust, high-
